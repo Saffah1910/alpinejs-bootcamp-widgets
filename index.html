@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//unpkg.com/alpinejs" defer></script>
     <title>Document</title>
 </head>
+
 <body>
-    
+
+    <div x-data="greet">
+        add name :<input type="text"  x-model="name">
+        <div x-text="name"></div>
+        <div>
+
+            <label>Select a Language:</label>
+            <select x-model="language">
+                <option >English </option>
+                <option >French</option>
+                <option >Arabic</option>
+                <option>Xhosa</option>
+            </select>
+            <span x-text="language" ></span>
+
+
+        </div>
+    </div>
 </body>
+<script src="./greet.js"></script>
+<script src="./index.js"></script>
+
 </html>
